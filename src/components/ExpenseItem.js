@@ -1,12 +1,17 @@
 import "./ExpenseItem.css"
 
-export default function ExpenseItem() {
+export default function ExpenseItem(props) {
+
+    // const expenseDate = new Date(2023, 5, 18);
+    // const expenseTitle = "Car Insurance";
+    // const expenseAmount = 294.67;
+
   return (
     <div className="expense-item">
-      <div>May 18, 2023</div>
+      <div>{props.date}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">$294.67</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
       </div>
     </div>
   );
